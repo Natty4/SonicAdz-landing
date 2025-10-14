@@ -70,7 +70,7 @@ document.getElementById("advertiseBtn").addEventListener("click", () => {
 
   overlay.classList.add("active");
   setTimeout(() => {
-    window.location.href = "https://sonicadx.onrender.com/advertiser/?user_type=advertiser";
+    window.location.href = "https://sonicadx.onrender.com/advertiser/";
   }, 1000);
 });
 
