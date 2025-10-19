@@ -66,7 +66,6 @@ document.querySelectorAll(".glass-card, .value-prop-content, .value-prop-visual"
 
 // CTA Button Click Handlers (placeholder functionality)
 document.getElementById("advertiseBtn").addEventListener("click", () => {
-  console.log("[v0] Advertise Now clicked - opening modal")
   const modal = document.getElementById("comingSoonModal")
   modal.classList.add("active")
 })
