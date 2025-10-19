@@ -66,13 +66,65 @@ document.querySelectorAll(".glass-card, .value-prop-content, .value-prop-visual"
 
 // CTA Button Click Handlers (placeholder functionality)
 document.getElementById("advertiseBtn").addEventListener("click", () => {
-  const overlay = document.getElementById("loadingOverlay");
+  console.log("[v0] Advertise Now clicked - opening modal")
+  const modal = document.getElementById("comingSoonModal")
+  modal.classList.add("active")
+})
 
-  overlay.classList.add("active");
-  setTimeout(() => {
-    window.location.href = "https://sonicadx.onrender.com/advertiser/";
-  }, 1000);
-});
+const modalOverlay = document.getElementById("comingSoonModal")
+const modalClose = document.getElementById("modalClose")
+
+modalClose.addEventListener("click", () => {
+  modalOverlay.classList.remove("active")
+})
+
+// Close modal when clicking outside the container
+modalOverlay.addEventListener("click", (e) => {
+  if (e.target === modalOverlay) {
+    modalOverlay.classList.remove("active")
+  }
+})
+
+
+
+// Allow Enter key to submit email
+// emailInput.addEventListener("keypress", (e) => {
+//   if (e.key === "Enter") {
+//     emailSubmitBtn.click()
+//   }
+// })
+
+function updateCountdown() {
+  // Set launch date to 45 days from now
+  const launchDate = new Date()
+  launchDate.setDate(launchDate.getDate() + 45)
+
+  function tick() {
+    const now = new Date().getTime()
+    const distance = launchDate.getTime() - now
+
+    if (distance < 0) {
+      document.getElementById("days").textContent = "0"
+      document.getElementById("hours").textContent = "0"
+      document.getElementById("minutes").textContent = "0"
+      return
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+
+    document.getElementById("days").textContent = String(days).padStart(2, "0")
+    document.getElementById("hours").textContent = String(hours).padStart(2, "0")
+    document.getElementById("minutes").textContent = String(minutes).padStart(2, "0")
+  }
+
+  tick()
+  setInterval(tick, 1000)
+}
+
+// Initialize countdown on page load
+updateCountdown()
 
 document.getElementById("monetizeBtn").addEventListener("click", () => {
   const overlay = document.getElementById("loadingOverlay");
@@ -81,6 +133,11 @@ document.getElementById("monetizeBtn").addEventListener("click", () => {
   setTimeout(() => {
     window.location.href = "https://t.me/sonicAdzBot/sGo";
   }, 1000);
+});
+
+document.getElementById("contactBtn").addEventListener("click", () => {
+  window.location.href = "https://t.me/sonicAdzSupport/hi";
+
 });
 
 

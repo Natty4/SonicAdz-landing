@@ -41,7 +41,7 @@
     </div>
     <div id="loadingOverlay">
         <div class="spinner"></div>
-        <p>Redirecting...</p>
+        <p>Accelerating...</p>
     </div>
     <!-- Navigation -->
     <nav class="nav">
@@ -384,7 +384,7 @@
                             </div>
                             <div class="metric-card">
                                 <div class="metric-label">CTR</div>
-                                <div class="metric-value">7.43%</div>
+                                <div class="metric-value">7.3%</div>
                                 <div class="metric-change positive">+2.1%</div>
                             </div>
                             <div class="metric-card">
@@ -538,6 +538,106 @@
             </div>
         </div>
     </footer>
+
+    <!-- Coming Soon Modal -->
+    <div class="modal-overlay" id="comingSoonModal">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="coming-soon-badge">
+                        <span class="badge-dot"></span>
+                        Coming Soon
+                    </div>
+                    <h2 class="modal-title">
+                        <span class="title-word">Advertiser</span>
+                        <span class="title-word">Dashboard</span>
+                    </h2>
+                    <p class="modal-subtitle">
+                        We're building something extraordinary. Get early access and be the first to launch your campaigns.
+                    </p>
+                </div>
+
+                <div class="modal-features">
+                    <div class="feature-row">
+                        <div class="feature-icon-modal">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text-modal">
+                            <h3>Smart Campaign Builder</h3>
+                            <p>Create campaigns in seconds with AI-powered targeting</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-row">
+                        <div class="feature-icon-modal">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M8 12L6 14M16 12L18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text-modal">
+                            <h3>Real-Time Analytics</h3>
+                            <p>Track performance with live dashboards and insights</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-row">
+                        <div class="feature-icon-modal">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text-modal">
+                            <h3>Instant Deployment</h3>
+                            <p>Launch campaigns instantly to 100k+ Telegram users</p>
+                        </div>
+                    </div>
+
+                    <div class="modal-cta">
+                        <button class="contact-btn" id="contactBtn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.328-.373-.115l-6.869 4.332-2.97-.924c-.644-.213-.658-.644.135-.954l11.593-4.47c.537-.196 1.006.128.832.941z"/>
+                            </svg>
+                            <span>Contact on Telegram</span>
+                        </button>
+                        <p class="contact-notice">Click to reach our team on Telegram for early access</p>
+                    </div>
+                </div>
+
+
+                <div class="modal-countdown">
+                    <div class="countdown-label">Launching in</div>
+                    <div class="countdown-timer">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="days">45</span>
+                            <span class="countdown-unit">Days</span>
+                        </div>
+                        <span class="countdown-separator">:</span>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="hours">12</span>
+                            <span class="countdown-unit">Hours</span>
+                        </div>
+                        <span class="countdown-separator">:</span>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="minutes">34</span>
+                            <span class="countdown-unit">Minutes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
