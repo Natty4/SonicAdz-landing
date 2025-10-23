@@ -1792,6 +1792,44 @@ body {
   transform: scale(1.1);
 }
 
+.advertise-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem 2.5rem;
+    background: linear-gradient(135deg, var(--electric-blue), #0066cc);
+    border: none;
+    border-radius: 16px;
+    color: var(--navy);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.advertise-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(44, 146, 255, 0.5);
+}
+
+.advertise-btn:active {
+  transform: translateY(0);
+}
+
+.advertise-btn svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.advertise-btn:hover svg {
+  transform: scale(1.1);
+}
+
 .contact-notice {
   font-size: 0.9rem;
   color: var(--gray-400);
